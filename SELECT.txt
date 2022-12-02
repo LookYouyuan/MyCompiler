@@ -1,0 +1,50 @@
+SELECT(<else关键字> else):  else
+SELECT(<else语句> <else关键字> <复合语句>):  else
+SELECT(<else语句> @):  for identifier if while { }
+SELECT(<for关键字> for):  for
+SELECT(<for语句> <for关键字> ( <表达式> ; <表达式> ; <表达式> ) <复合语句>):  for
+SELECT(<if关键字> if):  if
+SELECT(<if语句> <if关键字> ( <表达式> ) <复合语句> <else语句>):  if
+SELECT(<int关键字> int):  int
+SELECT(<main关键字> main):  main
+SELECT(<while关键字> while):  while
+SELECT(<while语句> <while关键字> ( <表达式> ) <复合语句>):  while
+SELECT(<标识符表> identifier <其他标识符>):  identifier
+SELECT(<表达式> <算数表达式> <其他表达式>):  ( identifier number
+SELECT(<程序> <main关键字> ( ) { <声明序列> <语句序列> }):  main
+SELECT(<赋值语句> identifier = <表达式> ;):  identifier
+SELECT(<复合语句> { <语句序列> }):  {
+SELECT(<关系运算符> !=):  !=
+SELECT(<关系运算符> <):  <
+SELECT(<关系运算符> <=):  <=
+SELECT(<关系运算符> ==):  ==
+SELECT(<关系运算符> >):  >
+SELECT(<关系运算符> >=):  >=
+SELECT(<其他标识符> , <标识符表>):  ,
+SELECT(<其他标识符> @):  ;
+SELECT(<其他表达式> <关系运算符> <算数表达式>):  != < <= == > >=
+SELECT(<其他表达式> @):  ) ;
+SELECT(<其他语句序列> <语句> <其他语句序列>):  for identifier if while {
+SELECT(<其他语句序列> @):  }
+SELECT(<声明序列> <声明语句> <剩余序列>):  int
+SELECT(<声明语句> int <标识符表> ;):  int
+SELECT(<剩余序列> <声明语句> <剩余序列>):  int
+SELECT(<剩余序列> @):  for identifier if while {
+SELECT(<算数表达式> <项> <与项运算>):  ( identifier number
+SELECT(<项> <因子> <因子其他部分>):  ( identifier number
+SELECT(<因子> ( <算数表达式> )):  (
+SELECT(<因子> identifier):  identifier
+SELECT(<因子> number):  number
+SELECT(<因子其他部分> <与因子运算> <因子其他部分>):  * /
+SELECT(<因子其他部分> @):  != ) + - ; < <= == > >=
+SELECT(<与项运算> + <项> <与项运算>):  +
+SELECT(<与项运算> - <项> <与项运算>):  -
+SELECT(<与项运算> @):  != ) ; < <= == > >=
+SELECT(<与因子运算> * <因子>):  *
+SELECT(<与因子运算> / <因子>):  /
+SELECT(<语句> <for语句>):  for
+SELECT(<语句> <if语句>):  if
+SELECT(<语句> <while语句>):  while
+SELECT(<语句> <赋值语句>):  identifier
+SELECT(<语句> <复合语句>):  {
+SELECT(<语句序列> <语句> <其他语句序列>):  for identifier if while {

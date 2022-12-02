@@ -1,0 +1,29 @@
+FOLLOW(<else关键字>):  {
+FOLLOW(<else语句>):  for identifier if while { }
+FOLLOW(<for关键字>):  (
+FOLLOW(<for语句>):  for identifier if while { }
+FOLLOW(<if关键字>):  (
+FOLLOW(<if语句>):  for identifier if while { }
+FOLLOW(<main关键字>):  (
+FOLLOW(<while关键字>):  (
+FOLLOW(<while语句>):  for identifier if while { }
+FOLLOW(<标识符表>):  ;
+FOLLOW(<表达式>):  ) ;
+FOLLOW(<程序>):  #
+FOLLOW(<赋值语句>):  for identifier if while { }
+FOLLOW(<复合语句>):  else for identifier if while { }
+FOLLOW(<关系运算符>):  ( identifier number
+FOLLOW(<其他标识符>):  ;
+FOLLOW(<其他表达式>):  ) ;
+FOLLOW(<其他语句序列>):  }
+FOLLOW(<声明序列>):  for identifier if while {
+FOLLOW(<声明语句>):  for identifier if int while {
+FOLLOW(<剩余序列>):  for identifier if while {
+FOLLOW(<算数表达式>):  != ) ; < <= == > >=
+FOLLOW(<项>):  != ) + - ; < <= == > >=
+FOLLOW(<因子>):  != ) * + - / ; < <= == > >=
+FOLLOW(<因子其他部分>):  != ) + - ; < <= == > >=
+FOLLOW(<与项运算>):  != ) ; < <= == > >=
+FOLLOW(<与因子运算>):  != ) * + - / ; < <= == > >=
+FOLLOW(<语句>):  for identifier if while { }
+FOLLOW(<语句序列>):  }

@@ -1,0 +1,30 @@
+FIRST(<else关键字>):  else
+FIRST(<else语句>):  @ else
+FIRST(<for关键字>):  for
+FIRST(<for语句>):  for
+FIRST(<if关键字>):  if
+FIRST(<if语句>):  if
+FIRST(<int关键字>):  int
+FIRST(<main关键字>):  main
+FIRST(<while关键字>):  while
+FIRST(<while语句>):  while
+FIRST(<标识符表>):  identifier
+FIRST(<表达式>):  ( identifier number
+FIRST(<程序>):  main
+FIRST(<赋值语句>):  identifier
+FIRST(<复合语句>):  {
+FIRST(<关系运算符>):  != < <= == > >=
+FIRST(<其他标识符>):  , @
+FIRST(<其他表达式>):  != < <= == > >= @
+FIRST(<其他语句序列>):  @ for identifier if while {
+FIRST(<声明序列>):  int
+FIRST(<声明语句>):  int
+FIRST(<剩余序列>):  @ int
+FIRST(<算数表达式>):  ( identifier number
+FIRST(<项>):  ( identifier number
+FIRST(<因子>):  ( identifier number
+FIRST(<因子其他部分>):  * / @
+FIRST(<与项运算>):  + - @
+FIRST(<与因子运算>):  * /
+FIRST(<语句>):  for identifier if while {
+FIRST(<语句序列>):  for identifier if while {
